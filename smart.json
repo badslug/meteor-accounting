@@ -1,0 +1,8 @@
+{
+    "name": "accounting",
+    "description": "Accounting.js -  number, money and currency formatting - fully localisable, zero dependencies.",
+    "homepage": "https://github.com/IainShigeoka/meteor-accounting",
+    "author": "Iain Shigeoka (http://iain.shigeoka.com)",
+    "version": "0.3.2",
+    "git": "https://github.com/IainShigeoka/meteor-accounting.git"
+}
