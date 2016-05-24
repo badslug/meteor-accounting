@@ -10,15 +10,15 @@ See the Accounting.js website for documentation.
 Install using standard meteor:
 
 ```bash
-meteor install iain:accountingjs
+meteor install iain:accounting
 ```
 
-Use in Javascript using import (for example in `server/main.js` of a fresh
+Use in Javascript by import (for example in `server/main.js` of a fresh
 meteor project):
 
 ```javascript
 import { Meteor } from 'meteor/meteor';
-import { accounting } from 'meteor/iain:accountingjs'
+import { accounting } from 'meteor/iain:accounting'
 
 Meteor.startup(() => {
   // code to run on server at startup
