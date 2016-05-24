@@ -17,7 +17,7 @@
     var lib = {};
 
     // Current version
-    lib.version = '0.4.1';
+    lib.version = '0.4.2';
 
 
     /* --- Exposed settings --- */
@@ -170,7 +170,7 @@
      * Alias: `accounting.parse(string)`
      *
      * Decimal must be included in the regular expression to match floats (defaults to
-     * accounting.settings.number.decimal), so if the number uses a non-standard decimal 
+     * accounting.settings.number.decimal), so if the number uses a non-standard decimal
      * separator, provide it as the second argument.
      *
      * Also matches bracketed negatives (eg. "$ (1.99)" => -1.99)
@@ -375,10 +375,11 @@
 
 
     /* --- Module Definition --- */
-
     // Export accounting for CommonJS. If being loaded as an AMD module, define it as such.
     // Otherwise, just add `accounting` to the global object
-    if (typeof exports !== 'undefined') {
+    if (typeof Package !== 'undefined') {
+        accounting = lib
+    } else if (typeof exports !== 'undefined') {
         if (typeof module !== 'undefined' && module.exports) {
             exports = module.exports = lib;
         }
