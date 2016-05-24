@@ -2,7 +2,7 @@ Package.describe({
     summary: "Accounting.js -  number, money and currency formatting - fully localisable, zero dependencies.",
     documentation: "README.md",
     version: "0.4.2",
-    name: "iain:accounting",
+    name: "iain:accountingjs",
     git: "https://github.com/badslug/meteor-accounting.git"
 });
 
