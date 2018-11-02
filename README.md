@@ -13,15 +13,39 @@ Install using standard meteor:
 meteor install iain:accounting
 ```
 
-Use in Javascript by import (for example in `server/main.js` of a fresh
+Use in Javascript by importing (for example in `server/main.js` of a fresh
 meteor project):
 
 ```javascript
 import { Meteor } from 'meteor/meteor';
-import { accounting } from 'meteor/iain:accounting'
+import { accounting } from 'meteor/iain:accounting';
 
 Meteor.startup(() => {
   // code to run on server at startup
   console.log(accounting.formatMoney(123456789))
 });
+```
+
+### Blaze Template Example
+
+In your Javascript for your template (e.g. `asset.js`):
+
+```javascript
+
+import { Template } from 'meteor/templating';
+import { accounting } from 'meteor/iain:accounting';
+
+Template.asset.helpers({
+  formatCurrency(value) {
+    return accounting.formatMoney(value);
+  },
+});
+```
+
+In your template (e.g. `asset.html`)
+
+```html
+<template name="asset">
+      {{formatCurrency initialValue}}
+</template>
 ```
